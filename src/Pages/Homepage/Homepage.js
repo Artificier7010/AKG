@@ -1,0 +1,209 @@
+import React, { useEffect, useState } from 'react';
+import './homepage.scss';
+import { TbCertificate, TbEyeDiscount, TbFileCertificate, TbUsers, TbUserSquare, TbUserStar } from 'react-icons/tb';
+import Counter from '../../Components/Counter/Counter';
+import ScrollReveal from 'scrollreveal';
+import { AttentionSeeker, Bounce, Fade, Flip, Hinge, JackInTheBox, Roll, Slide, Zoom } from 'react-awesome-reveal';
+import { certificateData, servicesData } from '../../Constants/dummy';
+
+const Homepage = () => {
+
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [triggered, setTriggered] = useState(null);
+  const [countData, setCountData] = useState([
+    {
+      name: 'Our Certification',
+      value: 250,
+      icon: <TbCertificate color='rgba(255, 255, 255, 0.642)' />
+    },
+    {
+      name: 'Our Partners',
+      value: 1000,
+      icon: <TbUserSquare color='rgba(255, 255, 255, 0.642)' />
+    },
+    {
+      name: 'Certified Candidates',
+      value: 1000,
+      icon: <TbUserStar color='rgba(255, 255, 255, 0.642)' />
+    },
+    {
+      name: 'Registerd Users',
+      value: 1000,
+      icon: <TbUsers color='rgba(255, 255, 255, 0.642)' />
+    },
+    {
+      name: 'Certificates Issued',
+      value: 1000,
+      icon: <TbFileCertificate color='rgba(255, 255, 255, 0.642)' />
+    },
+    {
+      name: 'Site Visitor',
+      value: 1000,
+      icon: <TbEyeDiscount color='rgba(255, 255, 255, 0.642)' />
+    },
+  ])
+
+
+  // Update mouse position based on movement
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    const x = (clientX / window.innerWidth) * 2 - 1; // Normalize to range [-1, 1]
+    const y = (clientY / window.innerHeight) * 2 - 1; // Normalize to range [-1, 1]
+    setMousePosition({ x, y });
+  };
+
+  const handleReadmore = (ind) => {
+    setTriggered(ind);
+  }
+
+
+  return (
+    <div className="homepage" onMouseMove={handleMouseMove}>
+      <div className="home-wrap">
+
+        <div className="home-header">
+          <div className="header-wrap">
+            <div className="gradient"></div>
+            <div className="details" style={{
+              transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20
+                }px)`,
+            }}>
+              <div className="left-det">
+                <div className="stack st1" style={{ '--stacks': 3 }}>
+                  <span style={{ '--index': 0 }}>Rudra</span>
+                  <span style={{ '--index': 1 }}>Rudra</span>
+                  <span style={{ '--index': 2 }}>Rudra</span>
+                </div>
+                <div className="stack st2" style={{ '--stacks': 3 }}>
+                  <span style={{ '--index': 0 }}>Cyber</span>
+                  <span style={{ '--index': 1 }}>Cyber</span>
+                  <span style={{ '--index': 2 }}>Cyber</span>
+                </div>
+                <div className="stack st3" style={{ '--stacks': 3 }}>
+                  <span style={{ '--index': 0 }}>Perficient</span>
+                  <span style={{ '--index': 1 }}>Perficient</span>
+                  <span style={{ '--index': 2 }}>Perficient</span>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+        <div className="section-about" id='about'>
+          <div className="abt-wrap">
+            <div className="decr">
+              <h1>Meet Rudra <span className='glitched'>Cyber</span>  Perficient</h1>
+              <span>Established in 2022, Rudra Cyber Perficient is an ISO 9001:2015 certified training organization based in Dhamtari, Chhattisgarh, recognized by the Dubai Accreditation Center. As a leader in technical education, we offer 40+ services to bridge the gap between knowledge and application. Our vision is to build a globally competent community by making technology accessible and impactful for all, and our mission is to "Tech the World" by empowering individuals with innovative and comprehensive training. We strive to shape a future where technology empowers every individual to achieve their full potential.</span>
+            </div>
+
+            <div className="number-games">
+              <div className="numgame-wrap">
+                <div className="bganim">
+                  <div className="line">
+                    <div className="dot"></div>
+                  </div>
+                  <div className="line">
+                    <div className="dot"></div>
+                  </div>
+                  <div className="line">
+                    <div className="dot"></div>
+                  </div>
+                </div>
+                {countData.map((item, index) => {
+                  return (
+                    <Flip key={index} duration={1000 + (index * 200)} >
+                      <div className="glass-wrap" key={index}>
+                        <div className="ico">
+                          {item.icon}
+                        </div>
+                        <div className="name">
+                          {item.name}
+                        </div>
+                        <div className="count">
+                          <Counter targetNumber={item.value} duration={1000} />
+                        </div>
+                      </div>
+                    </Flip>
+                  )
+
+                })}
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="section-cetificates">
+          <div className="seccert-wrap">
+
+            <div className="heading">
+              <h1>Certi<span className='glitched' >fic</span>ations</h1>
+              <p>Your Trust, Our Expertise</p>
+            </div>
+
+            <div className="certificates-grid" id='certifications'>
+              {certificateData.map((item, index) => {
+                return (
+                  <Slide key={index} triggerOnce>
+                    <div className="cert-item"  >
+                      <h3 style={{ top: triggered == index ? '-100%' : 0, position: triggered == index ? 'absolute' : 'relative', transition: '0.5s ease' }}>{item.title}</h3>
+                      <button onClick={() => handleReadmore(index)} >Read</button>
+
+                      <div className="desc" onClick={() => setTriggered(null)} style={{ top: triggered == index ? 0 : '100%' }} >
+                        <p>{item.description}</p>
+                      </div>
+                    </div>
+                  </Slide>
+                )
+
+              })}
+            </div>
+
+          </div>
+        </div>
+
+
+        <div className="section-service" id='services'>
+          <div className="secser-wrap">
+
+            <div className="heading">
+              <h1>Ser<span className='glitched' >vi</span>ces</h1>
+              <p>Our Expertise, Your Advantage</p>
+            </div>
+
+            <div className="services-grid">
+              {servicesData.map((item, ind) => {
+                return (
+                  <Zoom key={ind}>
+                    <div className="serv-item">
+                      <div className="rotator"></div>
+                      <div className="overlay">
+                        <h3>{item.title}</h3>
+                      </div>
+                    </div>
+                  </Zoom>
+
+                )
+              })}
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+  )
+}
+
+export default Homepage

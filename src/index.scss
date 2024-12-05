@@ -1,0 +1,46 @@
+
+@font-face {
+    font-family: 'avengernorm'; // Custom name for the font
+    src: url('./assets/Fonts/avenger-font/AvengerCondensed-1glL.otf') format('opentype'); // Specify .otf format
+    font-weight: normal; // Optional: Set font weight
+    font-style: normal;  // Optional: Set font style
+  }
+@font-face {
+    font-family: 'avengernormal'; // Custom name for the font
+    src: url('./assets/Fonts/avenger-font/AvengerCondensedItalic-RmnM.otf') format('opentype'); // Specify .otf format
+    font-weight: normal; // Optional: Set font weight
+    font-style: normal;  // Optional: Set font style
+  }
+@font-face {
+    font-family: 'avenger'; // Custom name for the font
+    src: url('./assets/Fonts/avenger-font/AvengerGradientItalic-Kr1o.otf') format('opentype'); // Specify .otf format
+    font-weight: 100; // Optional: Set font weight
+    font-style: normal;  // Optional: Set font style
+  }
+:root{
+    --pri-color:#101010;
+    --sec-color:#1c1624;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    
+    
+}
+
+body{
+    width: 100vw;
+    height: 100vh; 
+}
+
+
+
+
+
