@@ -20,6 +20,7 @@ export default defineConfig({
     },
     react(),
   ],
+  base: '/',
   build: {
     rollupOptions: {
       input: './src/main.jsx', // Ensure proper entry point
