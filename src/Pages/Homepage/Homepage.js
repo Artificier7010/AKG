@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './homepage.scss';
 import { TbCertificate, TbEyeDiscount, TbFileCertificate, TbUsers, TbUserSquare, TbUserStar } from 'react-icons/tb';
+import { AiOutlineSchedule } from 'react-icons/ai';
+import { LuBrainCircuit } from 'react-icons/lu';
+import { GrCertificate, GrResources } from 'react-icons/gr';
+import { GiReceiveMoney } from 'react-icons/gi';
+import { PiPathBold } from 'react-icons/pi';
 import Counter from '../../Components/Counter/Counter';
 import ScrollReveal from 'scrollreveal';
 import { AttentionSeeker, Bounce, Fade, Flip, Hinge, JackInTheBox, Roll, Slide, Zoom } from 'react-awesome-reveal';
-import { certificateData, servicesData } from '../../Constants/dummy';
+import { benefitsData, certificateData, servicesData } from '../../Constants/dummy';
 
 const Homepage = () => {
 
@@ -193,6 +198,35 @@ const Homepage = () => {
               })}
 
             </div>
+
+          </div>
+        </div>
+
+
+        <div className="section-benefits">
+          <div className="secbene-wrap">
+
+            <div className="heading">
+              <h1>Unlock<span className='glitched'>  Benefits</span></h1>
+              <p>Empowering Your Hacking and Coding Journey</p>
+            </div>
+
+
+            <div className="grid-benefits">
+              {benefitsData.map((item, indx) => {
+                return (
+                  <Slide direction='down' key={indx}>
+                    <div className="bene-item">
+                      <div className="bene-card">
+                        <div className="detail">{item.title}</div>
+                        <div className="desc">{item.description}</div>
+                      </div>
+                    </div>
+                  </Slide>
+                )
+              })}
+            </div>
+
 
           </div>
         </div>

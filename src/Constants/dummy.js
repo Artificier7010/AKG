@@ -94,3 +94,37 @@ export const servicesData = [
     description: "Identify, assess, and mitigate risks to ensure business continuity."
   }
 ];
+
+
+export const benefitsData=[
+  {
+    "title": "Flexible Learning Schedules",
+    "description": "Learn hacking and coding at your own pace. Access courses anytime, fitting seamlessly into your daily schedule.",
+    "icon":"<AiOutlineSchedule/>"
+  },
+  {
+    "title": "Hands-on Practice with Real-World Scenarios",
+    "description": "Interactive labs and coding challenges simulate real-world problems, giving you practical experience in hacking and coding.",
+    "icon":"<LuBrainCircuit/>"
+  },
+  {
+    "title": "Access to Expert Resources",
+    "description": "Learn from top industry professionals and ethical hackers with video tutorials, webinars, and curated content.",
+    "icon":"<GrResources/>"
+  },
+  {
+    "title": "Cost-Effective and Time-Saving",
+    "description": "E-learning eliminates the need for travel or expensive classes, offering high-quality education at a fraction of the cost.",
+    "icon":"<GiReceiveMoney/>"
+  },
+  {
+    "title": "Personalized Learning Paths",
+    "description": "Choose modules tailored to your skill level, whether it's web security, Python programming, or ethical hacking certifications.",
+    "icon":"<PiPathBold/>"
+  },
+  {
+    "title": "Certification and Career Advancement",
+    "description": "Earn globally recognized certifications and build a portfolio to showcase your skills, boosting your career in cybersecurity or development.",
+    "icon":"<GrCertificate/>"
+  }
+]
