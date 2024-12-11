@@ -681,6 +681,7 @@
                         h1,p{
                             text-align: right;
                             color: rgb(209, 209, 255);
+
                         }
                         h1{
                             font-family: 'avengernorm';
@@ -959,6 +960,7 @@
                     &::after {
                         content: "";
                         background-size: cover;
+                        background-attachment: fixed;
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -1030,6 +1032,8 @@
             }
 
             .section-cetificates {
+                background: url('../../assets/doodleph.png');
+                background-size:contain;
 
                 .seccert-wrap {
                     padding: 100px 0px;

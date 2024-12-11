@@ -7,19 +7,29 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Homepage from './Pages/Homepage/Homepage';
 import logo from './assets/lightlogo.png';
 import About from './Pages/About/About';
+import TermsAndConditions from './Components/Terms/Terms';
+import PrivacyPolicy from './Components/Privacy/Privacy';
 
 function App() {
   const [showDrawer, setShowDrawer] = useState(false);
+
+  const scrollToSection = (sectionId) => {
+    const targetElement = document.getElementById(sectionId);
+    setShowDrawer(false);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="App">
       <div className="navbar">
 
-        <div className={showDrawer ?  "mob-menu-drawer shown" : "mob-menu-drawer"}>
+        <div className={showDrawer ? "mob-menu-drawer shown" : "mob-menu-drawer"}>
 
           <div className="drawer-wrap">
             <div className="close-btn">
-              <button onClick={()=>setShowDrawer(false)}  ><FaTimes/></button>
+              <button onClick={() => setShowDrawer(false)}  ><FaTimes /></button>
             </div>
             <ul className="mob-drwaermenu">
               <li>
@@ -37,46 +47,13 @@ function App() {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="#about"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  About
-                </NavLink>
+                <a onClick={() => scrollToSection('about')}>About</a>
               </li>
               <li>
-                <NavLink
-                  to="#services"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  Services
-                </NavLink>
+                <a onClick={() => scrollToSection('services')}>Services</a>
               </li>
               <li>
-                <NavLink
-                  to="#certifications"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  Certifications
-                </NavLink>
+                <a onClick={() => scrollToSection('certifications')}>Certifications</a>
               </li>
               <li>
                 <NavLink
@@ -117,46 +94,13 @@ function App() {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="#about"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  About
-                </NavLink>
+                <a onClick={() => scrollToSection('about')}>About</a>
               </li>
               <li>
-                <NavLink
-                  to="#services"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  Services
-                </NavLink>
+                <a onClick={() => scrollToSection('services')}>Services</a>
               </li>
               <li>
-                <NavLink
-                  to="#certifications"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  Certifications
-                </NavLink>
+                <a onClick={() => scrollToSection('certifications')}>Certifications</a>
               </li>
               <li>
                 <NavLink
@@ -182,7 +126,10 @@ function App() {
       <Routes>
         <Route element={<Homepage />} path='/' />
         <Route element={<About />} path='/about' />
+        <Route element={<TermsAndConditions />} path='/tandc' />
+        <Route element={<PrivacyPolicy />} path='/pandc' />
       </Routes>
+
     </div>
 
   )

@@ -2,49 +2,76 @@
 
 
 @font-face {
-    font-family: 'avengernorm'; // Custom name for the font
-    src: url('./assets/Fonts/avenger-font/AvengerCondensed-1glL.otf') format('opentype'); // Specify .otf format
-    font-weight: normal; // Optional: Set font weight
-    font-style: normal;  // Optional: Set font style
-  }
+  font-family: 'avengernorm'; // Custom name for the font
+  src: url('./assets/Fonts/avenger-font/AvengerCondensed-1glL.otf') format('opentype'); // Specify .otf format
+  font-weight: normal; // Optional: Set font weight
+  font-style: normal; // Optional: Set font style
+}
+
 @font-face {
-    font-family: 'avengernormal'; // Custom name for the font
-    src: url('./assets/Fonts/avenger-font/AvengerCondensedItalic-RmnM.otf') format('opentype'); // Specify .otf format
-    font-weight: normal; // Optional: Set font weight
-    font-style: normal;  // Optional: Set font style
-  }
+  font-family: 'avengernormal'; // Custom name for the font
+  src: url('./assets/Fonts/avenger-font/AvengerCondensedItalic-RmnM.otf') format('opentype'); // Specify .otf format
+  font-weight: normal; // Optional: Set font weight
+  font-style: normal; // Optional: Set font style
+}
+
 @font-face {
-    font-family: 'avenger'; // Custom name for the font
-    src: url('./assets/Fonts/avenger-font/AvengerGradientItalic-Kr1o.otf') format('opentype'); // Specify .otf format
-    font-weight: 100; // Optional: Set font weight
-    font-style: normal;  // Optional: Set font style
-  }
-:root{
-    --pri-color:#101010;
-    --sec-color:#1c1624;
-
-    --secfont:"Iceland", sans-serif;
+  font-family: 'avenger'; // Custom name for the font
+  src: url('./assets/Fonts/avenger-font/AvengerGradientItalic-Kr1o.otf') format('opentype'); // Specify .otf format
+  font-weight: 100; // Optional: Set font weight
+  font-style: normal; // Optional: Set font style
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --pri-color: #101010;
+  --sec-color: #1c1624;
+
+  --secfont: "Iceland", sans-serif;
 }
 
-html{
-    width: 100vw;
-    height: 100vh;
-    
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    width: 100vw;
-    height: 100vh; 
+html {
+  width: 100vw;
+  height: 100vh;
+
+
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 
+html::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+	border-radius: 10px;
+	background-color: #CCCCCC;
+}
 
+html::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
 
-
+html::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #D62929;
+	background-image: -webkit-linear-gradient(90deg,
+											  transparent,
+											  rgba(0, 0, 0, 0.4) 50%,
+											  transparent,
+											  transparent)
+}

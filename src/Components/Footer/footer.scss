@@ -1,0 +1,108 @@
+.footer {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background: #0f0f0f3e; // Glass effect
+    border-top: 1px solid #262626;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+
+    &::before {
+        content: "";
+        width: 300%;
+        height: 300%;
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        background: url('./assets/moving-bg.png') repeat;
+        background-size: cover;
+        animation: moveBackground 20s linear infinite;
+        z-index: -1;
+    }
+
+    .footer-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+
+        .footer-content {
+            margin-bottom: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+
+            .footer-logo {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-family: 'avengernormal';
+                color: rgba(255, 255, 255, 0.8);
+                margin-bottom: 20px;
+            }
+        }
+
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+
+            li {
+                a {
+                    font-family: 'avengernormal';
+                    color: rgba(255, 255, 255, 0.6);
+                    text-decoration: none;
+                    transition: 0.5s ease;
+
+                    &:hover {
+                        color: white;
+                        text-shadow: 2px 2px 4px rgba(255, 47, 47, 0.5);
+                    }
+                }
+            }
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+
+            a {
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+                transition: 0.5s ease;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        .footer-bottom {
+            p {
+                font-size: 0.8em;
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+}
+
+
+@keyframes moveBackground {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(100%, 100%);
+    }
+}

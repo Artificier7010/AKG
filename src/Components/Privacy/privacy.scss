@@ -1,0 +1,42 @@
+.privacy{
+    padding: 100px;
+    font-family: var(--secfont);
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+    ul{
+        list-style: none;
+    }
+    h1{
+        color: rgb(77, 77, 255);
+    }
+    h2{
+        margin: 25px 0;
+        color: rgba(176, 18, 18, 0.834);
+    }
+    p{
+        color: rgba(163, 163, 163, 0.568);
+    }
+}
+
+@media screen and (max-width:990px) {
+
+    .privacy{
+        padding:100px 10px;
+        ul{
+            list-style: none;
+        }
+        h1{
+            color: rgb(77, 77, 255);
+        }
+        h2{
+            margin: 25px 0;
+            color: rgba(176, 18, 18, 0.834);
+        }
+        p{
+            color: rgba(163, 163, 163, 0.568);
+        }
+    }
+
+
+}

@@ -11,6 +11,7 @@ import ScrollReveal from 'scrollreveal';
 import { AttentionSeeker, Bounce, Fade, Flip, Hinge, JackInTheBox, Roll, Slide, Zoom } from 'react-awesome-reveal';
 import { benefitsData, certificateData, howItWorksData, servicesData } from '../../Constants/dummy';
 import arrow from '../../assets/arrow.png';
+import Footer from '../../Components/Footer/Footer';
 
 
 
@@ -158,7 +159,7 @@ const Homepage = () => {
         </div>
 
 
-        <div className="section-cetificates">
+        <div className="section-cetificates" id='cerfic'>
           <div className="seccert-wrap">
 
             <div className="heading">
@@ -318,14 +319,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="footer">
-          <div className="footer-wrap">
-
-          </div>
-        </div>
-
-
-
+        <Footer/>
 
       </div>
     </div>
