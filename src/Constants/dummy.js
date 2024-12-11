@@ -20,12 +20,8 @@ export const certificateData = [
     description: "Acquire skills to analyze digital evidence and investigate cybercrimes."
   },
   {
-    title: "C",
-    description: "Master foundational programming concepts with the C language."
-  },
-  {
-    title: "C++",
-    description: "Advance your programming skills with object-oriented concepts in C++."
+    title: "C/C++",
+    description: "Master foundational programming concepts with the C/C++ language."
   },
   {
     title: "Python",
@@ -92,7 +88,11 @@ export const servicesData = [
   {
     title: "Risk Management",
     description: "Identify, assess, and mitigate risks to ensure business continuity."
-  }
+  },
+  {
+    title: "Server Management",
+    description: "Identify, assess, and mitigate risks to ensure business continuity."
+  },
 ];
 
 
@@ -128,3 +128,37 @@ export const benefitsData=[
     "icon":"<GrCertificate/>"
   }
 ]
+
+
+export const howItWorksData = [
+  {
+    "title": "Choose Your Certification",
+    "description": "Browse a variety of cybersecurity certifications and pick the one that suits your career aspirations.",
+    "icon": "<AiOutlineSelect/>"
+  },
+  {
+    "title": "Set Your Schedule",
+    "description": "Enjoy the flexibility of scheduling your online exam at a time and date that works best for you.",
+    "icon": "<AiOutlineCalendar/>"
+  },
+  {
+    "title": "Prepare for the Exam",
+    "description": "Access expert study materials, practice tests, and resources to get ready for the certification exam.",
+    "icon": "<FaBookReader/>"
+  },
+  {
+    "title": "Take the Exam Online",
+    "description": "Attend the certification exam from the comfort of your home with our secure online testing platform.",
+    "icon": "<MdOutlineComputer/>"
+  },
+  {
+    "title": "Get Certified",
+    "description": "Receive your globally recognized certification upon successfully passing the exam.",
+    "icon": "<GrCertificate/>"
+  },
+  {
+    "title": "Advance Your Career",
+    "description": "Leverage your certification to unlock exciting career opportunities in cybersecurity and beyond.",
+    "icon": "<GiCareer/>"
+  }
+];

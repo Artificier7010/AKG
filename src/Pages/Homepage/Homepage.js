@@ -9,7 +9,12 @@ import { PiPathBold } from 'react-icons/pi';
 import Counter from '../../Components/Counter/Counter';
 import ScrollReveal from 'scrollreveal';
 import { AttentionSeeker, Bounce, Fade, Flip, Hinge, JackInTheBox, Roll, Slide, Zoom } from 'react-awesome-reveal';
-import { benefitsData, certificateData, servicesData } from '../../Constants/dummy';
+import { benefitsData, certificateData, howItWorksData, servicesData } from '../../Constants/dummy';
+import arrow from '../../assets/arrow.png';
+
+
+
+
 
 const Homepage = () => {
 
@@ -60,6 +65,15 @@ const Homepage = () => {
   const handleReadmore = (ind) => {
     setTriggered(ind);
   }
+
+  const handleCardClick = () => {
+    const cardSound = new Audio('/click.mp3'); // Ensure path is correct
+    cardSound
+      .play()
+      .catch((error) => {
+        console.error("Audio playback failed:", error);
+      });
+  };
 
 
   return (
@@ -120,7 +134,7 @@ const Homepage = () => {
                 </div>
                 {countData.map((item, index) => {
                   return (
-                    <Flip key={index} duration={1000 + (index * 200)} >
+                    <Flip key={index} duration={1000 + (index * 200)} triggerOnce>
                       <div className="glass-wrap" key={index}>
                         <div className="ico">
                           {item.icon}
@@ -156,7 +170,7 @@ const Homepage = () => {
               {certificateData.map((item, index) => {
                 return (
                   <Slide key={index} triggerOnce>
-                    <div className="cert-item"  >
+                    <div className="cert-item" onClick={handleCardClick}  >
                       <h3 style={{ top: triggered == index ? '-100%' : 0, position: triggered == index ? 'absolute' : 'relative', transition: '0.5s ease' }}>{item.title}</h3>
                       <button onClick={() => handleReadmore(index)} >Read</button>
 
@@ -185,7 +199,7 @@ const Homepage = () => {
             <div className="services-grid">
               {servicesData.map((item, ind) => {
                 return (
-                  <Zoom key={ind}>
+                  <Zoom key={ind} triggerOnce>
                     <div className="serv-item">
                       <div className="rotator"></div>
                       <div className="overlay">
@@ -215,7 +229,7 @@ const Homepage = () => {
             <div className="grid-benefits">
               {benefitsData.map((item, indx) => {
                 return (
-                  <Slide direction='down' key={indx}>
+                  <Slide direction='down' key={indx} triggerOnce>
                     <div className="bene-item">
                       <div className="bene-card">
                         <div className="detail">{item.title}</div>
@@ -227,6 +241,85 @@ const Homepage = () => {
               })}
             </div>
 
+
+          </div>
+        </div>
+
+        <div className="section-banner">
+          <div className="banner-wrap">
+
+            <div className="container">
+              <div className="step">Learn</div>
+              <div className="line"><img src={arrow} alt='arrow' /></div>
+              <div className="step">Compete</div>
+              <div className="line"><img src={arrow} alt='arrow' /></div>
+              <div className="step">Certified</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="section-howtodo">
+          <div className="how-wrap">
+
+            <div className="heading">
+              <h1>How <span className='glitched'>It</span> Works</h1>
+              <p>Streamlining Your Path to Cybersecurity Certification</p>
+            </div>
+
+
+            <div className="how-container">
+
+              <div className="left">
+
+                <div className="descriptor">
+                  <h1>{howItWorksData[0].title}</h1>
+                  <p>{howItWorksData[0].description}</p>
+                </div>
+                <div className="descriptor">
+                  <h1>{howItWorksData[1].title}</h1>
+                  <p>{howItWorksData[1].description}</p>
+                </div>
+                <div className="descriptor">
+                  <h1>{howItWorksData[2].title}</h1>
+                  <p>{howItWorksData[2].description}</p>
+                </div>
+
+
+
+              </div>
+
+
+
+              <div className="right">
+
+                <div className="descriptor">
+                  <h1>{howItWorksData[3].title}</h1>
+                  <p>{howItWorksData[3].description}</p>
+                </div>
+                <div className="descriptor">
+                  <h1>{howItWorksData[4].title}</h1>
+                  <p>{howItWorksData[4].description}</p>
+                </div>
+                <div className="descriptor">
+                  <h1>{howItWorksData[5].title}</h1>
+                  <p>{howItWorksData[5].description}</p>
+                </div>
+
+
+              </div>
+
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+
+        <div className="footer">
+          <div className="footer-wrap">
 
           </div>
         </div>

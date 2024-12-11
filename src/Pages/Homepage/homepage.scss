@@ -296,6 +296,9 @@
 
         .section-cetificates {
             width: 100%;
+            background: url('../../assets/doodlebg.png');
+            background-size: cover;
+            background-position: center;
 
             .seccert-wrap {
                 width: 100%;
@@ -470,7 +473,9 @@
                 padding: 100px 30px;
                 background: url('../../assets/benebg.png');
                 background-size: cover;
-                background-position: center top;
+                background-position: center;
+                border-top: 5px solid #872121;
+                border-bottom: 5px solid #872121;
 
                 .grid-benefits {
                     width: 100%;
@@ -561,6 +566,137 @@
 
             }
         }
+
+        .section-banner {
+            width: 100%;
+
+            .banner-wrap {
+                width: 100%;
+                padding: 70px 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .container {
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+
+
+
+                    .step {
+                        width: 150px;
+                        height: 150px;
+                        border: 2px solid rgba(51, 116, 255, 0.913);
+                        border-top-left-radius: 50px;
+                        border-bottom-right-radius: 50px;
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        font-family: 'avengernormal';
+
+                        cursor: pointer;
+
+                        &:hover {
+                            border-top-left-radius: 0px;
+                            border-bottom-right-radius: 0px;
+                            border-top-right-radius: 50px;
+                            border-bottom-left-radius: 50px;
+                            letter-spacing: 2px;
+
+                        }
+                    }
+
+                    .line {
+                        width: 200px;
+                        animation: leftrt 0.5s infinite alternate-reverse ease;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .section-howtodo {
+            width: 100%;
+
+            .how-wrap {
+                width: 100%;
+                padding: 100px 30px;
+
+                .how-container {
+                    width: 100%;
+                    min-height: 600px;
+                    background: url('../../assets/howbg.png');
+                    background-size: cover;
+                    background-position: center;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .descriptor {
+                        width: 60%;
+                        padding: 10px;
+                        border: 1px solid rgba(255, 255, 255, 0.215);
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                    }
+
+                    .left {
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        h1,p{
+                            text-align: left;
+                            color: rgb(209, 209, 255);
+                        }
+                        h1{
+                            font-family: 'avengernorm';
+                            font-size: 0.9em;
+                            font-weight: 500;
+                        }
+                        p{
+                            font-family: var(--secfont);
+                            color: rgba(131, 131, 131, 0.545);
+                        }
+                    }
+
+                    .right {
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        gap: 50px;
+                        h1,p{
+                            text-align: right;
+                            color: rgb(209, 209, 255);
+                        }
+                        h1{
+                            font-family: 'avengernorm';
+                            font-size: 0.9em;
+                            font-weight: 500;
+                        }
+                        p{
+                            font-family: var(--secfont);
+                            color: rgba(131, 131, 131, 0.545);
+                        }
+
+                    }
+                }
+
+            }
+        }
     }
 }
 
@@ -641,6 +777,7 @@
     }
 
 }
+
 @keyframes linersmob {
     0% {
         top: 0;
@@ -681,6 +818,17 @@
 
     100% {
         rotate: 360deg;
+    }
+
+}
+
+@keyframes leftrt {
+    0% {
+        translate: -5px 0 0;
+    }
+
+    100% {
+        translate: 5px 0 0;
     }
 
 }
@@ -733,10 +881,10 @@
 @media screen and (max-width:990px) {
 
     .homepage {
-       
+
 
         .home-wrap {
-            
+
             .glitched {
                 font-family: 'avengernorm' !important;
                 text-shadow: 4px 4px 4px rgba(255, 47, 47, 0.5), -4px -4px 3px rgba(60, 67, 255, 0.8);
@@ -803,7 +951,7 @@
                                 }
                             }
 
-                           
+
                         }
 
                     }
@@ -811,7 +959,7 @@
                     &::after {
                         content: "";
                         background-size: cover;
-                        position:absolute;
+                        position: absolute;
                         top: 0;
                         left: 0;
                         width: 100%;
@@ -857,7 +1005,7 @@
                         span {
                             text-align: justify;
                             font-size: 1em;
-                            
+
                         }
 
                     }
@@ -1031,6 +1179,132 @@
                     }
 
 
+                }
+            }
+
+            .section-banner {
+                width: 100%;
+
+
+                .banner-wrap {
+                    width: 100%;
+                    padding: 70px 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .container {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+
+
+
+                        .step {
+                            width: 80px;
+                            height: 80px;
+                            border-top-left-radius: 25px;
+                            border-bottom-right-radius: 25px;
+                            border-top-right-radius: 0;
+                            border-bottom-left-radius: 0;
+                            font-size: 0.6em;
+
+                            &:hover {
+                                border-top-left-radius: 0px;
+                                border-bottom-right-radius: 0px;
+                                border-top-right-radius: 25px;
+                                border-bottom-left-radius: 25px;
+                                letter-spacing: 2px;
+
+                            }
+                        }
+
+                        .line {
+                            width: 40px;
+                            animation: leftrt 0.5s infinite alternate-reverse ease;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+            .section-howtodo {
+                width: 100%;
+    
+                .how-wrap {
+                    width: 100%;
+                    padding: 100px 10px;
+    
+                    .how-container {
+                        width: 100%;
+                        min-height: 600px;
+                        margin: 50px 0;
+                        background: url('../../assets/howphbg.png');
+                        background-size: cover;
+                        background-position: center;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+    
+                        .descriptor {
+                            width: 80%;
+                            min-height: 180px;
+                            padding: 10px;
+                            border: 1px solid rgba(255, 255, 255, 0.215);
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                        }
+    
+                        .left {
+                            width: 50%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 50px;
+                            h1,p{
+                                text-align: left;
+                                color: rgb(209, 209, 255);
+                            }
+                            h1{
+                                font-family: 'avengernorm';
+                                font-size: 0.9em;
+                                font-weight: 500;
+                            }
+                            p{
+                                font-family: var(--secfont);
+                                color: rgba(131, 131, 131, 0.545);
+                            }
+                        }
+    
+                        .right {
+                            width: 50%;
+                            height: 100%;
+                            display: flex;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            gap: 50px;
+                            h1,p{
+                                text-align: right;
+                                color: rgb(209, 209, 255);
+                            }
+                            h1{
+                                font-family: 'avengernorm';
+                                font-size: 0.9em;
+                                font-weight: 500;
+                            }
+                            p{
+                                font-family: var(--secfont);
+                                color: rgba(131, 131, 131, 0.545);
+                            }
+    
+                        }
+                    }
+    
                 }
             }
         }
