@@ -20,7 +20,7 @@ const Footer = () => {
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
                 <div className="footer-bottom">
-                    <p>&copy; 2024 Rudra CyberProficient. All Rights Reserved.</p>
+                    <p>&copy; 2024 Rudra Cyber Perficient. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

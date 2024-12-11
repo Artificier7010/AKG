@@ -71,8 +71,8 @@ const PrivacyPolicy = () => {
                 <p>
                     If you have any questions about this Privacy Policy, please contact us:
                     <ul>
-                        <li>Email: support@rudracyberperficient.com</li>
-                        <li>Phone: +91-123-456-7890</li>
+                        <li>Email: rudracyberperficient.inst@gmail.com</li>
+                        <li>Phone: +91-9343670050</li>
                     </ul>
                 </p>
             </div>

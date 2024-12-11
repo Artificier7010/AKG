@@ -11,7 +11,7 @@
         // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
         border-radius: 3px;
         background-color: #cccccc22;
-        
+
     }
 
     &::-webkit-scrollbar {
@@ -27,6 +27,53 @@
                 rgba(0, 0, 0, 0.4) 50%,
                 transparent,
                 transparent)
+    }
+
+
+    .contact-icons {
+        position: fixed;
+        z-index: 5;
+        right: -100%;
+        top: 150px;
+        transition: 1s ease;
+
+
+        &.show {
+            right: 20px;
+            transition: 0.5s ease;
+        }
+
+        .icons-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            span {
+                color: white;
+            }
+
+            a {
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(5px);
+                background: #6868683e !important;
+                border: 1px solid #adadad2e !important;
+                border-radius: 2px;
+                color: white;
+                transition: 0.5s ease;
+
+
+                &:hover {
+                    scale: 1.2;
+                    transition: 0.5s ease;
+                }
+
+            }
+        }
     }
 
     .navbar {
@@ -221,7 +268,7 @@
         &::-webkit-scrollbar {
             display: none;
         }
-    
+
         .navbar {
 
             .nav-wrap {

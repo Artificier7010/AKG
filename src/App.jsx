@@ -1,17 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.scss';
 import { NavLink, Route, Routes } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaFacebookF, FaInstagram, FaTimes, FaWhatsapp } from 'react-icons/fa';
 import Homepage from './Pages/Homepage/Homepage';
 import logo from './assets/lightlogo.png';
 import About from './Pages/About/About';
 import TermsAndConditions from './Components/Terms/Terms';
 import PrivacyPolicy from './Components/Privacy/Privacy';
+import { LuLinkedin, LuMail } from 'react-icons/lu';
 
 function App() {
   const [showDrawer, setShowDrawer] = useState(false);
+  const [showContacts, setShowContacts] = useState(false);
+
+
 
   const scrollToSection = (sectionId) => {
     const targetElement = document.getElementById(sectionId);
@@ -21,8 +25,30 @@ function App() {
     }
   };
 
+  const handleShowContacts = () => {
+    setShowContacts(true);
+    setShowDrawer(false);
+    setTimeout(() => {
+      setShowContacts((prev) => false);
+    }, 10000);
+  };
+
   return (
     <div className="App">
+
+      <div className={showContacts ? "contact-icons show" : "contact-icons"}>
+        <div className="icons-wrap">
+          <a href="https://www.instagram.com/rudracyberperficient/profilecard/?igsh=NDFhaDI1cjVvM2po"><FaInstagram /></a>
+          <span>|</span>
+          <a href="https://facebook.com"><FaFacebookF /></a>
+          <span>|</span>
+          <a href="mailto:rudracyberperficient.inst@gmail.com"><LuMail /></a>
+          <span>|</span>
+          <a href="https://linkedin.com"><LuLinkedin /></a>
+          <span>|</span>
+          <a href="https://wa.me/9343670050?text=Hello%2C%20I%20want%20info"><FaWhatsapp /></a>
+        </div>
+      </div>
       <div className="navbar">
 
         <div className={showDrawer ? "mob-menu-drawer shown" : "mob-menu-drawer"}>
@@ -56,18 +82,7 @@ function App() {
                 <a onClick={() => scrollToSection('certifications')}>Certifications</a>
               </li>
               <li>
-                <NavLink
-                  to="/"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  Contact
-                </NavLink>
+                <a onClick={handleShowContacts}>Contacts</a>
               </li>
             </ul>
           </div>
@@ -103,18 +118,7 @@ function App() {
                 <a onClick={() => scrollToSection('certifications')}>Certifications</a>
               </li>
               <li>
-                <NavLink
-                  to="/"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  Contact
-                </NavLink>
+                <a onClick={handleShowContacts}>Contacts</a>
               </li>
             </ul>
             <ul className="mob-menu">

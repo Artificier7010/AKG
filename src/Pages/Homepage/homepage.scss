@@ -5,6 +5,9 @@
     .home-wrap {
         width: 100%;
         height: 100%;
+        position: relative;
+
+        
 
         .glitched {
             font-family: 'avengernorm' !important;
@@ -656,16 +659,20 @@
                         display: flex;
                         flex-direction: column;
                         gap: 50px;
-                        h1,p{
+
+                        h1,
+                        p {
                             text-align: left;
                             color: rgb(209, 209, 255);
                         }
-                        h1{
+
+                        h1 {
                             font-family: 'avengernorm';
                             font-size: 0.9em;
                             font-weight: 500;
                         }
-                        p{
+
+                        p {
                             font-family: var(--secfont);
                             color: rgba(131, 131, 131, 0.545);
                         }
@@ -678,17 +685,21 @@
                         align-items: flex-end;
                         flex-direction: column;
                         gap: 50px;
-                        h1,p{
+
+                        h1,
+                        p {
                             text-align: right;
                             color: rgb(209, 209, 255);
 
                         }
-                        h1{
+
+                        h1 {
                             font-family: 'avengernorm';
                             font-size: 0.9em;
                             font-weight: 500;
                         }
-                        p{
+
+                        p {
                             font-family: var(--secfont);
                             color: rgba(131, 131, 131, 0.545);
                         }
@@ -1033,7 +1044,7 @@
 
             .section-cetificates {
                 background: url('../../assets/doodleph.png');
-                background-size:contain;
+                background-size: contain;
 
                 .seccert-wrap {
                     padding: 100px 0px;
@@ -1236,13 +1247,14 @@
                     }
                 }
             }
+
             .section-howtodo {
                 width: 100%;
-    
+
                 .how-wrap {
                     width: 100%;
                     padding: 100px 10px;
-    
+
                     .how-container {
                         width: 100%;
                         min-height: 600px;
@@ -1253,7 +1265,7 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-    
+
                         .descriptor {
                             width: 80%;
                             min-height: 180px;
@@ -1263,28 +1275,32 @@
                             flex-direction: column;
                             gap: 15px;
                         }
-    
+
                         .left {
                             width: 50%;
                             height: 100%;
                             display: flex;
                             flex-direction: column;
                             gap: 50px;
-                            h1,p{
+
+                            h1,
+                            p {
                                 text-align: left;
                                 color: rgb(209, 209, 255);
                             }
-                            h1{
+
+                            h1 {
                                 font-family: 'avengernorm';
                                 font-size: 0.9em;
                                 font-weight: 500;
                             }
-                            p{
+
+                            p {
                                 font-family: var(--secfont);
                                 color: rgba(131, 131, 131, 0.545);
                             }
                         }
-    
+
                         .right {
                             width: 50%;
                             height: 100%;
@@ -1292,23 +1308,27 @@
                             align-items: flex-end;
                             flex-direction: column;
                             gap: 50px;
-                            h1,p{
+
+                            h1,
+                            p {
                                 text-align: right;
                                 color: rgb(209, 209, 255);
                             }
-                            h1{
+
+                            h1 {
                                 font-family: 'avengernorm';
                                 font-size: 0.9em;
                                 font-weight: 500;
                             }
-                            p{
+
+                            p {
                                 font-family: var(--secfont);
                                 color: rgba(131, 131, 131, 0.545);
                             }
-    
+
                         }
                     }
-    
+
                 }
             }
         }

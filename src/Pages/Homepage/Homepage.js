@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './homepage.scss';
 import { TbCertificate, TbEyeDiscount, TbFileCertificate, TbUsers, TbUserSquare, TbUserStar } from 'react-icons/tb';
 import { AiOutlineSchedule } from 'react-icons/ai';
-import { LuBrainCircuit } from 'react-icons/lu';
+import { LuBrainCircuit, LuLinkedin, LuMail } from 'react-icons/lu';
 import { GrCertificate, GrResources } from 'react-icons/gr';
 import { GiReceiveMoney } from 'react-icons/gi';
 import { PiPathBold } from 'react-icons/pi';
@@ -12,6 +12,7 @@ import { AttentionSeeker, Bounce, Fade, Flip, Hinge, JackInTheBox, Roll, Slide, 
 import { benefitsData, certificateData, howItWorksData, servicesData } from '../../Constants/dummy';
 import arrow from '../../assets/arrow.png';
 import Footer from '../../Components/Footer/Footer';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 
 
@@ -21,6 +22,7 @@ const Homepage = () => {
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [triggered, setTriggered] = useState(null);
+  
   const [countData, setCountData] = useState([
     {
       name: 'Our Certification',
@@ -76,10 +78,14 @@ const Homepage = () => {
       });
   };
 
+  
+
 
   return (
     <div className="homepage" onMouseMove={handleMouseMove}>
       <div className="home-wrap">
+
+        
 
         <div className="home-header">
           <div className="header-wrap">
