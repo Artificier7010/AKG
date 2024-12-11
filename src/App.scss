@@ -220,6 +220,7 @@
                             text-decoration: none;
                             text-shadow: 2px 2px 4px rgba(255, 47, 47, 0), -2px -2px 3px rgba(60, 66, 255, 0);
                             transition: 0.5s ease;
+                            cursor: pointer;
 
                             &:hover {
                                 text-shadow: 4px 4px 4px rgba(255, 47, 47, 0.5), -4px -4px 3px rgba(60, 67, 255, 0.8);

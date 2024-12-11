@@ -14,6 +14,13 @@ import { LuLinkedin, LuMail } from 'react-icons/lu';
 function App() {
   const [showDrawer, setShowDrawer] = useState(false);
   const [showContacts, setShowContacts] = useState(false);
+  const [baseUrl, setBaseUrl] = useState("");
+
+
+  useEffect(() => {
+    const { protocol, host } = window.location;
+    setBaseUrl(`${protocol}//${host}`);
+  })
 
 
 
@@ -46,7 +53,7 @@ function App() {
           <span>|</span>
           <a href="https://linkedin.com"><LuLinkedin /></a>
           <span>|</span>
-          <a href="https://wa.me/9343670050?text=Hello%2C%20I%20want%20info"><FaWhatsapp /></a>
+          <a href="https://wa.me/1234567890?text=Hello%2C%20I%20am%20interested%20in%20learning%20about%20your%20courses%20and%20certifications.%20Could%20you%20please%20provide%20more%20details%3F"><FaWhatsapp /></a>
         </div>
       </div>
       <div className="navbar">
@@ -59,18 +66,7 @@ function App() {
             </div>
             <ul className="mob-drwaermenu">
               <li>
-                <NavLink
-                  to="/"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  Home
-                </NavLink>
+                <a onClick={() => scrollToSection('top')}>Home</a>
               </li>
               <li>
                 <a onClick={() => scrollToSection('about')}>About</a>
@@ -95,18 +91,7 @@ function App() {
           <div className="right">
             <ul className="menu">
               <li>
-                <NavLink
-                  to="/"
-                  className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : "",
-                      isActive ? "active" : "",
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  }
-                >
-                  Home
-                </NavLink>
+                <a onClick={() => scrollToSection('top')}>Home</a>
               </li>
               <li>
                 <a onClick={() => scrollToSection('about')}>About</a>

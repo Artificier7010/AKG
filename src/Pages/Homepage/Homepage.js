@@ -23,35 +23,38 @@ const Homepage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [triggered, setTriggered] = useState(null);
   
+
+ 
+
   const [countData, setCountData] = useState([
     {
       name: 'Our Certification',
-      value: 250,
+      value: 43,
       icon: <TbCertificate color='rgba(255, 255, 255, 0.642)' />
     },
     {
       name: 'Our Partners',
-      value: 1000,
+      value: 13,
       icon: <TbUserSquare color='rgba(255, 255, 255, 0.642)' />
     },
     {
       name: 'Certified Candidates',
-      value: 1000,
+      value: 21328,
       icon: <TbUserStar color='rgba(255, 255, 255, 0.642)' />
     },
     {
       name: 'Registerd Users',
-      value: 1000,
+      value: 44167,
       icon: <TbUsers color='rgba(255, 255, 255, 0.642)' />
     },
     {
       name: 'Certificates Issued',
-      value: 1000,
+      value: 35981,
       icon: <TbFileCertificate color='rgba(255, 255, 255, 0.642)' />
     },
     {
       name: 'Site Visitor',
-      value: 1000,
+      value: 92456,
       icon: <TbEyeDiscount color='rgba(255, 255, 255, 0.642)' />
     },
   ])
@@ -81,11 +84,13 @@ const Homepage = () => {
   
 
 
+
+
   return (
-    <div className="homepage" onMouseMove={handleMouseMove}>
+    <div className="homepage" onMouseMove={handleMouseMove} id='top'>
       <div className="home-wrap">
 
-        
+
 
         <div className="home-header">
           <div className="header-wrap">
@@ -325,7 +330,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <Footer/>
+        <Footer />
 
       </div>
     </div>
